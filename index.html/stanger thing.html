@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stranger Things Fan Page</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background:#0b0c10;
+    color:white;
+}
+
+/* ---------- INTRO SCREEN ---------- */
+
+#intro{
+    height:100vh;
+    background: url('https://static0.colliderimages.com/wordpress/wp-content/uploads/2022/06/Stranger-Things-The-Upside-Down-Explained-feature.jpg?fit=crop&h=900&w=1200') center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+}
+
+#intro h1{
+    font-size:60px;
+    color:#e50914;
+    text-shadow:0 0 20px red;
+    letter-spacing:4px;
+    margin-bottom:30px;
+}
+
+#openBtn{
+    padding:15px 40px;
+    font-size:22px;
+    border:none;
+    background:#e50914;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+#openBtn:hover{
+    background:black;
+    box-shadow:0 0 20px red;
+    transform:scale(1.1);
+}
+
+/* ---------- MAIN WEBSITE ---------- */
+
+#mainContent{
+    display:none;
+    animation:fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+header{
+    background:#111;
+    text-align:center;
+    padding:20px;
+    box-shadow:0 0 15px red;
+}
+
+header h1{
+    color:#66fcf1;
+    letter-spacing:3px;
+}
+
+section{
+    width:90%;
+    max-width:1000px;
+    margin:30px auto;
+    background:#1f2833;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(255,0,0,0.4);
+}
+
+h2{
+    color:#66fcf1;
+    border-bottom:2px solid #45a29e;
+    padding-bottom:8px;
+    margin-bottom:15px;
+}
+
+img{
+    width:100%;
+    border-radius:10px;
+    margin:15px 0;
+    transition:0.4s;
+}
+
+img:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 20px red;
+}
+
+ul,ol{
+    padding-left:25px;
+    font-size:18px;
+}
+
+.character{
+    margin-top:20px;
+    padding:15px;
+    background:#0b0c10;
+    border-radius:10px;
+}
+
+footer{
+    text-align:center;
+    padding:15px;
+    background:#111;
+    color:#aaa;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ---------- INTRO PAGE ---------- -->
+<div id="intro">
+    <h1>STRANGER THINGS</h1>
+    <button id="openBtn">ENTER THE UPSIDE DOWN</button>
+</div>
+
+<!-- ---------- MAIN WEBSITE ---------- -->
+<div id="mainContent">
+
+<header>
+    <h1>Welcome to Hawkins</h1>
+</header>
+
+<section>
+    <h2>Short Story</h2>
+    <img src="https://www.nme.com/wp-content/uploads/2022/05/Stranger_Things_Cast_Group.jpg">
+    <p>
+        In Hawkins, Indiana, a boy disappears, uncovering secret experiments and a terrifying world
+        called the Upside Down. A girl with powers helps friends fight dark forces and save their town.
+    </p>
+</section>
+
+<section>
+    <h2>Main Characters</h2>
+    <ul>
+        <li>Eleven</li>
+        <li>Mike Wheeler</li>
+        <li>Dustin Henderson</li>
+        <li>Lucas Sinclair</li>
+        <li>Will Byers</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Important Heroes</h2>
+
+    <div class="character">
+        <h3>Jim Hopper</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/en/0/08/JimHopperST.png">
+        <p>Protector of Hawkins and father figure to Eleven.</p>
+    </div>
+
+    <div class="character">
+        <h3>Steve Harrington</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8b/ST3_Steve_Harrington_portrait.jpg/250px-ST3_Steve_Harrington_portrait.jpg">
+        <p>From high school teen to monster-fighting legend.</p>
+    </div>
+</section>
+
+<section>
+    <h2>Villains</h2>
+    <ul>
+        <li>Mind Flayer</li>
+        <li>Vecna</li>
+    </ul>
+</section>
+
+<footer>
+    Fan made Stranger Things Website
+</footer>
+
+</div>
+
+<script>
+document.getElementById("openBtn").onclick = function(){
+    document.getElementById("intro").style.display="none";
+    document.getElementById("mainContent").style.display="block";
+}
+</script>
+
+</body>
+</html>
